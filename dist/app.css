@@ -7,6 +7,19 @@ h1 {
   font-weight: 300;
 }
 
+.btn {
+  padding: 15px 20px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 2px solid #efefef;
+  font-size: 20px;
+}
+.btn--active {
+  border-color: #40c4ff;
+  background-color: #40c4ff;
+  color: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,10 +74,30 @@ nav .main__nav .nav__link li a:hover {
 nav .main__nav .nav__icon i:not(:last-child) {
   margin-right: 20px;
 }
+nav .main__nav .nav__icon i:hover {
+  color: #9ce0ff;
+  cursor: pointer;
+}
+nav .main__nav .nav__icon .article--bag {
+  position: relative;
+}
+nav .main__nav .nav__icon .article--bag:after {
+  content: "0";
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  border-radius: 50%;
+  background-color: #40c4ff;
+}
 
 .title {
   text-align: center;
-  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -73,4 +106,54 @@ nav .main__nav .nav__icon i:not(:last-child) {
 .title p {
   margin: 35px 0;
   line-height: 35px;
+}
+
+.dots {
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dots .dot {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #eaebeb;
+  border: 2px solid transparent;
+  margin: 10px;
+  cursor: pointer;
+}
+.dots .dot.dot--active {
+  border-color: #ffffff;
+  background-color: transparent;
+}
+.dots .dot.dot--active:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.dots .dot:hover {
+  border-color: #ffffff;
+  transform: scale(1.3);
+  background-color: transparent;
+}
+.dots .dot:hover:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
 }

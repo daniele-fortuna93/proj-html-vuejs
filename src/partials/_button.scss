@@ -1,0 +1,12 @@
+.btn{
+    padding: 15px 20px;
+    text-transform: uppercase;
+    background-color: $textWhite;
+    border: 2px solid $borderColorGrey;
+    font-size: $fontNormal;
+    &--active{
+        border-color: $mainColor;
+        background-color: $mainColor;
+        color: $textWhite;
+    }
+}
