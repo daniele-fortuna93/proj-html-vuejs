@@ -1,0 +1,17 @@
+header{
+
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+    &.background--1{
+        background-image: url('../img/h5-slide-1-background.jpg');
+    }
+    &.background--2{
+        background-image: url('../img/h5-slide-2-background.jpg');
+    }
+    &.background--3{
+        background-image: url('../img/h5-slide-3-background.jpg');
+    }
+}

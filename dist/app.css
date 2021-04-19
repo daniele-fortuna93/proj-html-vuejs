@@ -1,3 +1,20 @@
-body {
-  background-color: red;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+header.background--1 {
+  background-image: url("../img/h5-slide-1-background.jpg");
+}
+header.background--2 {
+  background-image: url("../img/h5-slide-2-background.jpg");
+}
+header.background--3 {
+  background-image: url("../img/h5-slide-3-background.jpg");
 }
