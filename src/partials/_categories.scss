@@ -1,0 +1,19 @@
+.categories__box{
+    display: flex;
+    justify-content: space-between;
+    .category{
+        text-align: center;
+        border: 1px solid #d6f2ff;
+        background-color: #f7fdff;
+        padding: 60px 0;
+        width: calc((100% / 6) - 40px);
+        cursor: pointer;
+        img{
+            margin-bottom: 15px;
+        }
+        &:hover{
+            border-color: $mainColor;
+        }
+
+    }
+}

@@ -54,7 +54,26 @@
         </header>
         <!-- /header -->
         <!-- main -->
-        <main></main>
+        <main>
+            <section id="categories">
+
+                <div class="categories__box container">
+                    <div v-for="category in categoriesList" class="category">
+                        <img :src="'img/h5-custom-icon-' + category.icon" alt="">
+                        <h4>{{ category.name }}</h4>
+                    </div>
+                </div>
+            </section>
+            <section id="home-tutoring">
+                <div class="home-tutoring__box container">
+                    <h3>The Trusted Name <br> for In-Home Tutoring</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus corrupti quos et dolorem veniam, accusantium eveniet sequi nam odio? Voluptatibus sequi consectetur nostrum praesentium facilis ipsum similique, quod voluptas debitis.</p>
+                    <a href="">Learn More</a>
+                     <img src="img/h5-img-1.jpg" alt="">
+                </div>
+                
+            </section>
+        </main>
         <!-- /main -->
         <!-- footer -->
         <footer>
@@ -70,9 +89,10 @@
                             <a href="">Providing Life Changing Experiences Through Education. Class Tha Fit Your Busy Life. Closer to Home</a>
                         </li>
                         <li>
-                            1-677-124-44227
+                            <i class="fas fa-phone"></i> 1-677-124-44227
                         </li>
                         <li>
+                            <i class="far fa-clock"></i>
                             Mon - Sat 8.00 - 18.00
                         </li>
                         

@@ -1,0 +1,20 @@
+.home-tutoring__box{
+    p{
+        color: $textGrey;
+        font-size: $fontNormal;
+        margin-bottom: 30px;
+    }
+    a{
+        font-size: $fontNormal;
+        color: $mainColor;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    a:hover{
+        color: $mainColorLight;
+    }
+    img{
+        width: 100%;
+    }
+}
