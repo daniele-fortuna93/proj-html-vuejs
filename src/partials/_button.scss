@@ -8,5 +8,10 @@
         border-color: $mainColor;
         background-color: $mainColor;
         color: $textWhite;
+        &:hover{
+            border-color: $mainColorLight;
+            background-color: $mainColorLight;
+            cursor: pointer;
+        }
     }
 }
