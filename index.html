@@ -20,7 +20,7 @@
 <body>
     <div id="root">
         <!-- header -->
-        <header class="background--3">
+        <header :class=" 'background--' + dotIndex">
             <!-- nav -->
             <nav class="container">
                 <div class="logo">
@@ -49,7 +49,7 @@
             </div>
             <!-- /nav -->
             <div class="dots">
-                <div  v-for=" dot in 3" class="dot"></div>
+                <div  @click="sliderBack(dot)" v-for=" dot in 3" class="dot" :class=" dot == dotIndex ? 'dot--active' : '' "></div>
             </div>
         </header>
         <!-- /header -->
