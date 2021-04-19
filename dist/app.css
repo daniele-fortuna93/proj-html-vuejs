@@ -1,13 +1,29 @@
+body {
+  font-family: "Merriweather", serif;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+.container {
+  margin: auto;
+  width: 1600px;
+}
+
 header {
+  position: relative;
+  color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 700px;
 }
 header.background--1 {
   background-image: url("../img/h5-slide-1-background.jpg");
@@ -17,4 +33,44 @@ header.background--2 {
 }
 header.background--3 {
   background-image: url("../img/h5-slide-3-background.jpg");
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+nav .main__nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+nav .main__nav .nav__link li {
+  display: inline-block;
+  margin-right: 35px;
+}
+nav .main__nav .nav__link li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav .main__nav .nav__link li a:hover {
+  color: #40c4ff;
+  cursor: pointer;
+}
+nav .main__nav .nav__icon i:not(:last-child) {
+  margin-right: 20px;
+}
+
+.title {
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title p {
+  margin: 35px 0;
+  line-height: 35px;
 }

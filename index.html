@@ -4,26 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- /google font -->
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- /vue -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- /font awesome -->
     <link rel="stylesheet" href="dist/app.css">
     <title>Document</title>
 </head>
 <body>
-    <!-- header -->
-    <header class="background--3">
-        <!-- nav -->
-        <nav>
-            <div class="logo"></div>
-            <div class="main__nav"></div>
-            <div class="nav__icon"></div>       
-        </nav>
-        <!-- /nav -->
-    </header>
-    <!-- /header -->
-    <!-- main -->
-    <main></main>
-    <!-- /main -->
-    <!-- footer -->
-    <footer></footer>
-    <!-- /footer -->
+    <div id="root">
+        <!-- header -->
+        <header class="background--3">
+            <!-- nav -->
+            <nav class="container">
+                <div class="logo">
+                    <img src="img/logo-light.png" alt="">
+                </div>
+                <div class="main__nav">
+                    <ul class="nav__link">
+                        <li v-for="link in linkNav">
+                            <a href="">{{ link }}</a>
+                        </li>
+                    </ul>
+                    <div class="nav__icon">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-shopping-bag"></i>
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                    
+            </nav>
+            <div class="title">
+                <h1>Contemporary Ideas</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolor dolore sunt, eius explicabo corporis? Inventore, quae rerum! explicabo corporis? Inventore, quae rerum!
+                </p>
+                <button>Register Now</button>
+            </div>
+            <!-- /nav -->
+        </header>
+        <!-- /header -->
+        <!-- main -->
+        <main></main>
+        <!-- /main -->
+        <!-- footer -->
+        <footer></footer>
+        <!-- /footer -->
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
