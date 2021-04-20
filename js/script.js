@@ -4,7 +4,7 @@ var app = new Vue (
         el: '#root',
         data: {
             linkNav: ['HOME', 'COURSES', 'INSTRUCTORS', 'EVENTS', 'PAGES', 'ELEMENTS'],
-            dotIndex: 3,
+            dotIndex: 1,
             categoriesList:[
                 {
                     name: 'Languages',

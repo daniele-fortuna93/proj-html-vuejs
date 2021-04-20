@@ -40,6 +40,9 @@ h3 {
   margin: auto;
   width: 1600px;
 }
+.container.container--small {
+  width: 70%;
+}
 
 section {
   margin: 80px 0;
@@ -194,6 +197,7 @@ nav .main__nav .nav__icon .article--bag:after {
 .home-tutoring__box p {
   color: #b9b9b9;
   font-size: 18px;
+  line-height: 30px;
   margin-bottom: 30px;
 }
 .home-tutoring__box a {
@@ -208,6 +212,36 @@ nav .main__nav .nav__icon .article--bag:after {
 }
 .home-tutoring__box img {
   width: 100%;
+}
+
+.empower__box {
+  display: flex;
+}
+.empower__box .empower__img, .empower__box .empower__text {
+  width: 50%;
+}
+.empower__box .empower__img img {
+  width: 100%;
+}
+.empower__box .empower__text {
+  padding: 5px 125px 10px 35px;
+}
+.empower__box .empower__text p {
+  font-size: 18px;
+  color: #b9b9b9;
+  line-height: 30px;
+}
+.empower__box .empower__numbers {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 40px;
+  color: #40c4ff;
+}
+.empower__box .empower__numbers p {
+  font-size: 45px;
+  color: #40c4ff;
+  margin-bottom: 20px;
 }
 
 footer {

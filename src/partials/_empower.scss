@@ -1,0 +1,30 @@
+.empower__box{
+    display: flex;
+    .empower__img, .empower__text{
+        width: 50%;
+    }
+    .empower__img img{
+        width: 100%;
+    }
+    .empower__text{
+        padding: 5px 125px 10px 35px;
+        p{
+            font-size: $fontNormal;
+            color: $textGrey;
+            line-height: $lineParagraph;
+        }    
+    }
+    .empower__numbers{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        margin-top: 40px;
+        color: $mainColor;
+        p{
+            font-size: $fontBig;
+            color: $mainColor;
+            margin-bottom: 20px;
+        } 
+        
+    }
+}
