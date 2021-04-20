@@ -5,6 +5,7 @@ var app = new Vue (
         data: {
             linkNav: ['HOME', 'COURSES', 'INSTRUCTORS', 'EVENTS', 'PAGES', 'ELEMENTS'],
             dotIndex: 1,
+            dotReviews: 1,
             categoriesList:[
                 {
                     name: 'Languages',
@@ -32,16 +33,25 @@ var app = new Vue (
                 },
 
             ],
-            autoplayHeader: null
-            // footerLink: {
-            //     {
-            //         name: 'iAcademy',
-            //         link: [
-            //             'Providing Life Changing Experiences Through Education. Class Tha Fit Your Busy Life. Closer to Home'
-            //         ]
-            //     }
-            // }
-                
+            autoplayHeader: null,
+            autoplayReviews: null,
+            studentReviews:[
+                {
+                    name: 'Maria Contrada',
+                    reviews: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto numquam, cum dolorem laborum corrupti dolore expedita minima quos exercitationem dolores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto numquam, cum dolorem laborum corrupti dolore expedita minima quos exercitationem dolores?',
+                    img: '1.png'
+                },
+                {
+                    name: 'Joan Collins',
+                    reviews: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto numquam, cum dolorem laborum corrupti dolore expedita minima quos exercitationem dolores? amet consectetur adipisicing elit. Architecto numquam, cum dolorem laborum corrupti dolore expedita minima quos exercitationem dolores?',
+                    img: '2.png'
+                },
+                {
+                    name: 'Matt Drag',
+                    reviews: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto numquam, cum dolorem laborum corrupti dolore expedita minima quos exercitationem dolores? amet consectetur adipisicing elit. Architecto numquam, cum dolorem laborum corrupti dolore expedita minima quos exercitationem dolores?',
+                    img: '3.png'
+                },
+            ]
             
         },
         mounted: function(){
@@ -50,6 +60,14 @@ var app = new Vue (
                     this.dotIndex = 1;
                 } else {
                     this.dotIndex++;
+                }
+                
+            }, 2000);
+            this.autoplayReviews = setInterval( ()=> {
+                if ( this.dotReviews == 3){
+                    this.dotReviews = 1;
+                } else {
+                    this.dotReviews++;
                 }
                 
             }, 2000);

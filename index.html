@@ -77,6 +77,7 @@
                 
             </section>
             <!-- home tutoring -->
+            <!-- section empower -->
             <section id="empower">
                 <div class="empower__box container">
                     <div class="empower__img">
@@ -98,6 +99,18 @@
                     </div>
                 </div>
             </section>
+            <!-- /section empower -->
+            <section id="reviews">
+                <div v-for="(student, index) in studentReviews" class="reviews__box" v-if="index == (dotReviews - 1)">
+                    <img :src="'img/testimonials-standard-' + student.img" alt="">
+                    <p>{{ student.reviews }}</p>
+                    <h4>{{ student.name }}</h4>
+                    <span>STUDENT</span>
+                </div>
+                <div class="bullet">
+                    <span :class="dot == dotReviews ? 'bullet__dot--active' : ''"@click="dotReviews = dot" class="bullet__dot" v-for="dot in studentReviews.length"></span>
+                </div>
+            </section>
         </main>
         <!-- /main -->
         <!-- footer -->
@@ -106,15 +119,16 @@
                 <div class="footer__link">
                     <ul>
                         <li>
-                            <a href="">
+                            
                                 <img src="img/footer-logo-1.png" alt="">
-                            </a>
+                            
                         </li>
                         <li>
-                            <a href="">Providing Life Changing Experiences Through Education. Class Tha Fit Your Busy Life. Closer to Home</a>
+                            Providing Life Changing Experiences Through Education. Class Tha Fit Your Busy Life. Closer to Home
                         </li>
                         <li>
-                            <i class="fas fa-phone"></i> 1-677-124-44227
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:1-677-124-44227">1-677-124-44227</a>
                         </li>
                         <li>
                             <i class="far fa-clock"></i>
@@ -123,25 +137,25 @@
                         
                     </ul>
                     <ul>
-                        <li><a href="">Popula Courses</a></li>
+                        <li>Popular Courses</li>
                         <li>
                             <p>
                                 <a href="">Business English</a> 
-                                <span>Preston Marshall</span>
+                                <a href=""><span>Preston Marshall</span></a>
                             </p>
                             
                         </li>
                         <li>
                             <p>
                                 <a href="">Social Computing</a>
-                                <span>David Sanders</span>
+                                <a href=""><span>David Sanders</span></a>
                             </p>
                             
                         </li>
                         <li>
                             <p>
                                 <a href="">Learn Spanish</a>
-                                <span>Jennie King</span>
+                                <a href=""><span>Jennie King</span></a>
                             </p>
                             
                         </li>
@@ -149,7 +163,7 @@
                     </ul>
                     <ul>
                         <li>
-                            <a href="">Support</a>
+                            Support
                         </li>
                         <li>
                             <a href="">User Dashboard</a>
@@ -170,7 +184,7 @@
                     </ul>
                     <ul>
                         <li>
-                            <a href="">Flexible Learning</a>
+                            Flexible Learning
                         </li>
                         <li>
                             <img src="img/footer-img-1.png" alt="">

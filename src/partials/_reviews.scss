@@ -1,0 +1,50 @@
+#reviews{
+    height: 700px;
+    background-image: url('../img/h5-parallax-img-1.png');
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.reviews__box{
+    width: 70%;
+    margin:auto;
+    text-align: center;
+    color: $textWhite;
+    margin-bottom: 30px;
+    img{
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: $fontNormal;
+        line-height: $lineParagraph;
+        margin-bottom: 30px;
+    }
+    h4{
+        margin-bottom: 10px;
+    }
+    span{
+        font-size: $fontSmall;
+    }
+    
+    
+}
+.bullet{
+    width: 100%;
+    text-align: center;
+    .bullet__dot{
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: $textWhite;
+        cursor: pointer;
+        opacity: 0.6;
+        margin-right: 10px;
+        &.bullet__dot--active{
+            opacity: 1;
+        }
+    }
+    
+}
