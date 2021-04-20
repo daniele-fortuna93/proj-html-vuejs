@@ -136,7 +136,7 @@
             <!-- /possibilities -->
             <!-- courses -->
             <section id="courses">
-                <div class="container container--small">
+                <div class="container container--small section__title">
                     <h3>Popular Online Courses</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex labore, repellat autem modi vel! Aliquam corrupti quos iusto </p>
                 </div>
@@ -166,6 +166,27 @@
 
             </section>
             <!-- /courses -->
+            <!-- plans -->
+            <section id="plans">
+                <div class="container container--small section__title">
+                    <h3>Pricing Plans</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem at fuga veritatis sapiente, labore </p>
+                </div>
+            </section>
+            <!-- /plans -->
+            <!-- affiliates -->
+            <section id="affiliates">
+                <div class="container">
+                    <ul  class="box__affiliates">
+                        <li v-for="client in listAffiliates">
+                            <img :src="'img/h5-client-' + client" alt="">
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+            <!-- /affiliates -->
+
         </main>
         <!-- /main -->
         <!-- footer -->

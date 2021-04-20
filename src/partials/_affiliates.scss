@@ -1,0 +1,11 @@
+.box__affiliates{
+    display: flex;
+    justify-content: space-between;
+    li{
+        list-style: none;
+        img{
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}

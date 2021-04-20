@@ -174,7 +174,7 @@ var app = new Vue (
                         price: 'Free'
                     },
                     {
-                        title: 'Financial Modeling',
+                        title: 'Basic Marketing',
                         name: 'Edward Bowman',
                         img: '9',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
@@ -192,7 +192,7 @@ var app = new Vue (
                         price: '$50'
                     },
                     {
-                        title: 'Web Designing',
+                        title: 'Python for Everybody',
                         name: 'Jennifer Powell',
                         img: '11',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
@@ -200,7 +200,7 @@ var app = new Vue (
                         price: 'Free'
                     },
                     {
-                        title: 'Financial Modeling',
+                        title: 'Human-Centered Design',
                         name: 'Preston Marshall',
                         img: '12',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
@@ -210,6 +210,13 @@ var app = new Vue (
                 ]
 
 
+            ],
+            listAffiliates: [
+                '1.png',
+                '2.png',
+                '3.png',
+                '4.png',
+                '5.png'
             ]
             
         },

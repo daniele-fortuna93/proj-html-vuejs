@@ -16,6 +16,14 @@ section {
   margin: 80px 0;
 }
 
+.section__title {
+  text-align: center;
+}
+.section__title p {
+  font-size: 17px;
+  color: #808080;
+}
+
 .bullet {
   width: 100%;
   text-align: center;
@@ -367,14 +375,7 @@ nav .main__nav .nav__icon .article--bag:after {
   border-bottom: 1px solid #efefef;
   background-image: url("../img/page-background-img.png");
   background-size: cover;
-  padding: 50px 0;
-}
-#courses .container--small {
-  text-align: center;
-}
-#courses .container--small p {
-  font-size: 17px;
-  color: #808080;
+  padding: 80px 0;
 }
 #courses .courses__box {
   display: flex;
@@ -431,6 +432,26 @@ nav .main__nav .nav__icon .article--bag:after {
   font-size: 17px;
   color: #b9b9b9;
   font-weight: 700;
+}
+
+#plans {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background-image: url("../img/page-background-img.png");
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.box__affiliates {
+  display: flex;
+  justify-content: space-between;
+}
+.box__affiliates li {
+  list-style: none;
+}
+.box__affiliates li img {
+  width: 100%;
+  cursor: pointer;
 }
 
 footer {
