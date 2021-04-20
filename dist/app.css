@@ -31,7 +31,7 @@ h3 {
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
 }
 
@@ -297,6 +297,64 @@ nav .main__nav .nav__icon .article--bag:after {
 }
 .bullet .bullet__dot.bullet__dot--active {
   opacity: 1;
+}
+
+.possibilities__box {
+  display: flex;
+}
+.possibilities__box .list__choose {
+  width: 30%;
+}
+.possibilities__box .list__choose li {
+  list-style: none;
+  border: 1px solid #efefef;
+  width: 100%;
+}
+.possibilities__box .list__choose li:not(:first-child) {
+  border-top: none;
+}
+.possibilities__box .list__choose .button__choose {
+  width: 100%;
+  padding: 25px;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  border-left: 5px solid transparent;
+  font-size: 26px;
+  color: #808080;
+}
+.possibilities__box .list__choose .button__choose.button__choose--active, .possibilities__box .list__choose .button__choose:hover {
+  border-color: #40c4ff;
+  background-color: #f7fdff;
+  color: #40c4ff;
+}
+.possibilities__box .list__choose .button__choose:hover {
+  cursor: pointer;
+}
+.possibilities__box .list__box {
+  width: 70%;
+  padding: 20px 80px 20px 40px;
+}
+.possibilities__box .list__box .choose__content {
+  position: relative;
+}
+.possibilities__box .list__box .choose__content p {
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+.possibilities__box .list__box .choose__content p i {
+  color: #40c4ff;
+  margin-right: 5px;
+}
+.possibilities__box .list__box .choose__content .content__text {
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+.possibilities__box .list__box .choose__content img {
+  position: absolute;
+  width: 150px;
+  bottom: -80px;
+  right: 30px;
 }
 
 footer {

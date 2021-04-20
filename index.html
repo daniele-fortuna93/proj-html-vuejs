@@ -100,6 +100,7 @@
                 </div>
             </section>
             <!-- /section empower -->
+            <!-- reviews -->
             <section id="reviews">
                 <div v-for="(student, index) in studentReviews" class="reviews__box" v-if="index == (dotReviews - 1)">
                     <img :src="'img/testimonials-standard-' + student.img" alt="">
@@ -111,6 +112,28 @@
                     <span :class="dot == dotReviews ? 'bullet__dot--active' : ''"@click="dotReviews = dot" class="bullet__dot" v-for="dot in studentReviews.length"></span>
                 </div>
             </section>
+            <!-- reviews -->
+            <!-- possibilities -->
+            <section id="possibilities">
+                <div class="possibilities__box container">
+                    <div  class="list__choose">
+                        <ul>
+                            <li v-for="(choose, index) in listChoose">
+                                <button :class="index == indexChoose ? 'button__choose--active' : ''"@click="indexChoose = index"class="button__choose" >{{ choose.name }}</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list__box">
+                        <div v-if="index == indexChoose"v-for="(content, index) in listChoose" class="choose__content">
+                            <h3>{{ content.title }}</h3>
+                            <p class="content__text">{{ content.text }}</p>
+                            <p v-for="service in content.services"><i class="fas fa-check"></i> {{ service }}</p>
+                            <img :src="'img/h12-tabs-icon-' + content.img" alt="">
+                        </div>
+                    </div>   
+                </div>
+            </section>
+            <!-- /possibilities -->
         </main>
         <!-- /main -->
         <!-- footer -->
