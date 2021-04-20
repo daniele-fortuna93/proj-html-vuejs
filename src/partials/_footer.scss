@@ -17,11 +17,15 @@ footer{
                 cursor: pointer;
                 text-decoration: none;
                 color: $textWhite;
-                opacity: 0.8;
+                opacity: 0.7;
                 font-size: $fontSmall;
             }
+            a:hover{
+                cursor: pointer;
+                opacity: 1;
+            }
             img{
-                width: 100%;
+                width: 80%;
             }
             p a{
                 font-size: 18px;

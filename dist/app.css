@@ -266,11 +266,15 @@ footer {
   cursor: pointer;
   text-decoration: none;
   color: #ffffff;
-  opacity: 0.8;
+  opacity: 0.7;
   font-size: 14px;
 }
+.footer__link ul li a:hover {
+  cursor: pointer;
+  opacity: 1;
+}
 .footer__link ul li img {
-  width: 100%;
+  width: 80%;
 }
 .footer__link ul li p a {
   font-size: 18px;
