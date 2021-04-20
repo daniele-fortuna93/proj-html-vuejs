@@ -30,21 +30,3 @@
     
     
 }
-.bullet{
-    width: 100%;
-    text-align: center;
-    .bullet__dot{
-        display: inline-block;
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-        background-color: $textWhite;
-        cursor: pointer;
-        opacity: 0.6;
-        margin-right: 10px;
-        &.bullet__dot--active{
-            opacity: 1;
-        }
-    }
-    
-}

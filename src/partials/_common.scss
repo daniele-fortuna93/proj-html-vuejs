@@ -13,4 +13,27 @@
 section{
     margin: 80px 0;
 }
+.bullet{
+    width: 100%;
+    text-align: center;
+    .bullet__dot{
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.6;
+        margin-right: 10px;
+        &.bullet__dot--active{
+            opacity: 1;
+        }
+        &.dot__white{
+            background-color: $textWhite;
+        }
+        &.dot__main--color{
+            background-color: $mainColor;
+        }
+    }
+    
+}
 

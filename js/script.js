@@ -35,6 +35,7 @@ var app = new Vue (
             ],
             autoplayHeader: null,
             autoplayReviews: null,
+            autoplayCourses: null,
             studentReviews:[
                 {
                     name: 'Maria Contrada',
@@ -126,6 +127,89 @@ var app = new Vue (
                     ],
                     img: '6.png'
                 }
+            ],
+            indexCourses: 0,
+            listCourses: [
+                [
+                    {
+                        title: 'Android Developer',
+                        name: 'David Sanders',
+                        img: '4',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Programming',
+                        price: 'Free'
+                    },
+                    {
+                        title: 'Web Designing',
+                        name: 'Jennifer Powell',
+                        img: '5',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Programming',
+                        price: 'Free'
+                    },
+                    {
+                        title: 'Financial Modeling',
+                        name: 'Edward Bowman',
+                        img: '6',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Business',
+                        price: '$20'
+                    }
+                ],
+                [
+                    {
+                        title: 'Android Developer',
+                        name: 'David Sanders',
+                        img: '7',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Programming',
+                        price: 'Free'
+                    },
+                    {
+                        title: 'Web Designing',
+                        name: 'Jennifer Powell',
+                        img: '8',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Programming',
+                        price: 'Free'
+                    },
+                    {
+                        title: 'Financial Modeling',
+                        name: 'Edward Bowman',
+                        img: '9',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Business',
+                        price: '$20'
+                    }
+                ],
+                [
+                    {
+                        title: 'Android Developer',
+                        name: 'Jennie King',
+                        img: '10',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Programming',
+                        price: '$50'
+                    },
+                    {
+                        title: 'Web Designing',
+                        name: 'Jennifer Powell',
+                        img: '11',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Programming',
+                        price: 'Free'
+                    },
+                    {
+                        title: 'Financial Modeling',
+                        name: 'Preston Marshall',
+                        img: '12',
+                        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
+                        type: 'Business',
+                        price: '$40'
+                    }
+                ]
+
+
             ]
             
         },
@@ -137,7 +221,7 @@ var app = new Vue (
                     this.dotIndex++;
                 }
                 
-            }, 2000);
+            }, 3000);
             this.autoplayReviews = setInterval( ()=> {
                 if ( this.dotReviews == 3){
                     this.dotReviews = 1;
@@ -145,7 +229,15 @@ var app = new Vue (
                     this.dotReviews++;
                 }
                 
-            }, 2000);
+            }, 3000);
+            this.autoplayCourses = setInterval( ()=> {
+                if ( this.indexCourses == 2){
+                    this.indexCourses = 0;
+                } else {
+                    this.indexCourses++;
+                }
+                
+            }, 3000);
         },
         methods:{
             sliderBack: function (dot){

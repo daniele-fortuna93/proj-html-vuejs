@@ -109,7 +109,7 @@
                     <span>STUDENT</span>
                 </div>
                 <div class="bullet">
-                    <span :class="dot == dotReviews ? 'bullet__dot--active' : ''"@click="dotReviews = dot" class="bullet__dot" v-for="dot in studentReviews.length"></span>
+                    <span :class="dot == dotReviews ? 'bullet__dot--active' : ''"@click="dotReviews = dot" class="bullet__dot dot__white" v-for="dot in studentReviews.length"></span>
                 </div>
             </section>
             <!-- reviews -->
@@ -134,6 +134,38 @@
                 </div>
             </section>
             <!-- /possibilities -->
+            <!-- courses -->
+            <section id="courses">
+                <div class="container container--small">
+                    <h3>Popular Online Courses</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex labore, repellat autem modi vel! Aliquam corrupti quos iusto </p>
+                </div>
+                <div class="container courses__box">
+                    <div v-for="course in listCourses[indexCourses]" class="card">
+                        <img :src="'img/course-' + course.img + '-f-img.jpg'" alt="">
+                        <div class="card__content">
+                            <div class="card__title">
+                                <h4>{{ course.title }}</h4>
+                                <span :class=" course.price == 'Free' ? 'free' : ''">{{ course.price }}</span>
+                            </div>
+                            
+                            <span class="teacher__name">{{ course.name }}</span>
+                            <p>{{ course.content }}</p>
+                            <div class="card__info">
+                                <span><i class="fas fa-user"></i> 1</span>
+                                <span><i class="fas fa-tag"></i> {{ course.type }}</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="bullet">
+                        <span @click="indexCourses = index" v-for="( dot, index ) in listCourses.length" class="bullet__dot dot__main--color" :class="indexCourses == index ? 'bullet__dot--active' : ''"></span>
+                    </div>
+                </div>
+                
+
+            </section>
+            <!-- /courses -->
         </main>
         <!-- /main -->
         <!-- footer -->

@@ -1,0 +1,74 @@
+#courses{
+    border-top: 1px solid $borderColorGrey;
+    border-bottom: 1px solid $borderColorGrey;
+    background-image: url('../img/page-background-img.png');
+    background-size: cover;
+    padding: 50px 0;
+    .container--small{
+        text-align: center;
+        p{
+            font-size: $fontNormal;
+            color: $textGreyDark;
+        }
+    }
+    .courses__box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 60px;
+        .card{
+            width: 25%;
+            border: 1px solid $borderColorGrey;
+            margin-bottom: 30px;
+            img{
+                width: 100%;
+            }
+            .card__title{
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: space-between;
+                h4{
+                    font-size: 22px;
+                }
+                span{
+                    text-transform: uppercase;
+                    color: $textWhite;
+                    text-align: center;
+                    display: inline-block;
+                    border-radius: 20px;
+                    width: 70px;
+                    padding: 5px 0;
+                    background-color: $mainColor;
+                    
+                }
+                .free{
+                    background-color: #ffd740;
+                }
+            }
+            .card__content{
+                padding: 30px 20px;
+                
+                p{
+                    font-size: $fontNormal;
+                    line-height: $lineParagraph;
+                    color: $textGrey;
+                    margin: 25px 0;
+                }
+                .teacher__name{
+                    font-size: $fontNormal;
+                    color: $textGreyLight;
+                    font-weight: 700;
+                }
+                .card__info{
+                    span{
+                        display: inline-block;
+                        margin-right: 10px;
+                        font-size: $fontNormal;
+                        color: $textGrey;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
