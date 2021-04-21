@@ -4,14 +4,15 @@
     background-color: $textWhite;
     border: 2px solid $borderColorGrey;
     font-size: $fontNormal;
+    color: $textGreyLight;
+    cursor: pointer;
     &--active{
         border-color: $mainColor;
         background-color: $mainColor;
         color: $textWhite;
         &:hover{
             border-color: $mainColorLight;
-            background-color: $mainColorLight;
-            cursor: pointer;
+            background-color: $mainColorLight;           
         }
     }
 }

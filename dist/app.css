@@ -72,6 +72,8 @@ h4 {
   background-color: #ffffff;
   border: 2px solid #efefef;
   font-size: 17px;
+  color: #cecece;
+  cursor: pointer;
 }
 .btn--active {
   border-color: #40c4ff;
@@ -81,7 +83,6 @@ h4 {
 .btn--active:hover {
   border-color: #9ce0ff;
   background-color: #9ce0ff;
-  cursor: pointer;
 }
 
 header {
@@ -394,6 +395,7 @@ nav .main__nav .nav__icon .article--bag:after {
 #courses .courses__box .card .card__title {
   margin-bottom: 5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 #courses .courses__box .card .card__title h4 {
@@ -440,6 +442,55 @@ nav .main__nav .nav__icon .article--bag:after {
   background-image: url("../img/page-background-img.png");
   background-size: cover;
   padding: 80px 0;
+}
+#plans .plans__box {
+  margin-top: 80px;
+  display: flex;
+}
+#plans .plans__box .plans__list {
+  border-top: 4px solid rgba(64, 196, 255, 0.3);
+  text-align: center;
+  width: 25%;
+}
+#plans .plans__box .plans__list li {
+  list-style: none;
+  padding: 15px 25px;
+  color: #cecece;
+  border: 1px solid #efefef;
+}
+#plans .plans__box .plans__list li .check--blue {
+  color: #40c4ff;
+}
+#plans .plans__box .plans__list li:first-child {
+  padding: 25px;
+  color: #303030;
+  border-top: none;
+}
+#plans .plans__box .plans__list li:first-child img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+#plans .plans__box .plans__list li:first-child span {
+  font-size: 25px;
+}
+#plans .plans__box .plans__list li:first-child h4 {
+  margin-bottom: 10px;
+}
+#plans .plans__box .plans__choose:hover {
+  background-color: rgba(156, 224, 255, 0.2);
+  border-color: rgba(64, 196, 255, 0.6);
+}
+#plans .plans__box .plans__background {
+  background-color: rgba(156, 224, 255, 0.1);
+}
+#plans .plans__box .border--active {
+  border-color: #40c4ff;
+}
+#plans .plans__box .plans__list:first-child {
+  text-align: left;
+}
+#plans .plans__box .plans__list:first-child li:first-child img {
+  opacity: 0;
 }
 
 .box__affiliates {
@@ -543,8 +594,16 @@ footer {
     width: 1100px;
   }
 
-  .nav__link {
-    display: none;
+  h4 {
+    font-size: 17px;
+  }
+
+  .logo img {
+    width: 70%;
+  }
+
+  nav .main__nav {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 1200px) {

@@ -211,6 +211,48 @@ var app = new Vue (
 
 
             ],
+            listPlans:[
+                {
+                    name: 'Standard',
+                    img: '7.png',
+                    price: 12,
+                    courses: 2,
+                    time: 15,
+                    webDesigning: true,
+                    humanDesign: true,
+                    basicMarketing: false,
+                    python: false,
+                    android: false,
+                    businessEnglish: false
+                },
+                {
+                    name: 'Professional',
+                    img: '8.png',
+                    price: 59,
+                    courses: 4,
+                    time: 30,
+                    webDesigning: true,
+                    humanDesign: true,
+                    basicMarketing: true,
+                    python: true,
+                    android: false,
+                    businessEnglish: false
+                },
+                {
+                    name: 'Advanced',
+                    img: '9.png',
+                    price: 88,
+                    courses: 6,
+                    time: 30,
+                    webDesigning: true,
+                    humanDesign: true,
+                    basicMarketing: true,
+                    python: true,
+                    android: true,
+                    businessEnglish: true
+                }
+            ],
+            planSelected: 1,
             listAffiliates: [
                 '1.png',
                 '2.png',

@@ -172,6 +172,40 @@
                     <h3>Pricing Plans</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem at fuga veritatis sapiente, labore </p>
                 </div>
+                <div class="container plans__box">
+                    <ul class="plans__list">
+                        <li>
+                            <img src="img/h5-custom-icon-7.png" alt="">
+                            <h4>Save up to 40% by paying weekly</h4>
+                        </li>
+                        
+                        <li>Number of Courses</li>
+                        <li>Time</li>
+                        <li>Web Designing</li>
+                        <li>Human-Centered Design</li>
+                        <li>Basic Marketing</li>
+                        <li>Python for Everybody</li>
+                        <li>Android Developer</li>
+                        <li>Business English</li>
+                    </ul>
+                    <ul  v-for="(plan, index) in listPlans" class="plans__list plans__choose" :class="planSelected == index ? 'border--active' : ''">
+                        <li class="plans__background">
+                            <img :src="'img/h5-custom-icon-' + plan.img" alt="">
+                            <h4>{{ plan.name }}</h4>
+                            <span>${{ plan.price}}</span>
+                        </li>
+                        <li>{{ plan.courses }}</li>
+                        <li>{{ plan.time }} Days</li>
+                        <li><span v-if="plan.webDesigning"><i class="fas fa-check check--blue"></i></span></i><span v-else><i class="fas fa-times"></i></span></li>
+                        <li><span v-if="plan.humanDesign"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                        <li><span v-if="plan.basicMarketing"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                        <li><span v-if="plan.python"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                        <li><span v-if="plan.android"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                        <li><span v-if="plan.businessEnglish"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                        <li class="plans__background"><button @click="planSelected = index":class="planSelected == index ? 'btn--active' : ''"class="btn">Get it now</button></li>
+                    </ul>
+
+                </div>
             </section>
             <!-- /plans -->
             <!-- affiliates -->

@@ -7,9 +7,20 @@
     .container{
         width: $containerSmall;
     }
-    .nav__link{
-        display: none;
+    h4{
+        font-size: $fontNormal;
     }
+    .logo{
+        img{
+            width: 70%;
+        }
+    }
+    nav{
+        .main__nav{
+            font-size: $fontSmall;
+        }
+    }
+    
 }
 @media screen and (max-width: 1200px) {
     .container{
