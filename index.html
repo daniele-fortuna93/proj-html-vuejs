@@ -18,28 +18,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root">
+    <div id="root" >
         <!-- header -->
         <header :class=" 'background--' + dotIndex">
             <!-- nav -->
-            <nav class="container">
-                <div class="logo">
-                    <img src="img/logo-light.png" alt="">
-                </div>
-                <div class="main__nav">
-                    <ul class="nav__link">
-                        <li v-for="link in linkNav">
-                            <a href="">{{ link }}</a>
-                        </li>
-                    </ul>
-                    <div class="nav__icon">
-                        <i class="fas fa-search"></i>
-                        <i class="fas fa-shopping-bag article--bag"></i>
-                        <i class="fas fa-bars"></i>
+            <div class="container">
+                <nav :class="navWhite == false ? 'nav__sticky' : ''">
+                    <div class="logo">
+                        <img src="img/logo-light.png" alt="" v-if="navWhite">
+                        <img src="img/logo-default.png" alt="" v-else>
                     </div>
-                </div>
-                    
-            </nav>
+                    <div class="main__nav">
+                        <ul class="nav__link">
+                            <li v-for="link in linkNav">
+                                <a href="">{{ link }}</a>
+                            </li>
+                        </ul>
+                        <div class="nav__icon">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-shopping-bag article--bag"></i>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                        
+                </nav>
+            </div>
             <div class="title">
                 <h1>Contemporary Ideas</h1>
                 <p>
@@ -53,6 +56,9 @@
             </div>
         </header>
         <!-- /header -->
+        <button @click="scrollTop" class="back__top" :class="topPageVisible ? 'back__top--active' : ''">
+            <i class="fas fa-angle-up"></i>top
+        </button>
         <!-- main -->
         <main>
             <!-- categories -->

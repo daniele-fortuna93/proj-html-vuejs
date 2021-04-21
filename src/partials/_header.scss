@@ -70,6 +70,37 @@ nav{
         }
 
     }
+    &.nav__sticky{
+        position: fixed;
+        width: 100%;
+        padding: 20px 10%;
+        left: 0;
+        background-color: $textWhite;
+        z-index: 5;
+        .main__nav{
+            .nav__link{
+                li{   
+                    a{
+                        color: $textGreyDark; 
+                    }
+                    a:hover{
+                        color: $mainColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .nav__icon{
+            
+                i{
+                    color: $textGreyDark;
+                }
+                i:hover{
+                    color: $mainColorLight;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 .title{
     text-align: center;

@@ -259,10 +259,13 @@ var app = new Vue (
                 '3.png',
                 '4.png',
                 '5.png'
-            ]
+            ],
+            topPageVisible: false,
+            navWhite: true
             
         },
         mounted: function(){
+            window.addEventListener('scroll', this.scrollListener);
             this.autoplayHeader = setInterval( ()=> {
                 if ( this.dotIndex == 3){
                     this.dotIndex = 1;
@@ -291,6 +294,26 @@ var app = new Vue (
         methods:{
             sliderBack: function (dot){
                 this.dotIndex = dot;
+            },
+            scrollListener: function() {
+                if ( window.scrollY > 100 ){
+                    this.navWhite = false;
+                    
+                } else {
+                    this.navWhite = true; 
+                }
+                if ( window.scrollY > 150 ){
+                    this.topPageVisible = true;
+                    
+                } else {
+                    this.topPageVisible = false; 
+                }
+            },
+            scrollTop: function(){
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
             }
         }
 });

@@ -12,6 +12,29 @@
   width: 70%;
 }
 
+.back__top {
+  display: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  background-color: #40c4ff;
+  color: #ffffff;
+  font-size: 17px;
+  outline: none;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.back__top i {
+  font-size: 25px;
+  display: block;
+}
+.back__top.back__top--active {
+  display: block;
+}
+
 section {
   margin: 80px 0;
 }
@@ -148,6 +171,28 @@ nav .main__nav .nav__icon .article--bag:after {
   line-height: 15px;
   border-radius: 50%;
   background-color: #40c4ff;
+}
+nav.nav__sticky {
+  position: fixed;
+  width: 100%;
+  padding: 20px 10%;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 5;
+}
+nav.nav__sticky .main__nav .nav__link li a {
+  color: #808080;
+}
+nav.nav__sticky .main__nav .nav__link li a:hover {
+  color: #40c4ff;
+  cursor: pointer;
+}
+nav.nav__sticky .main__nav .nav__icon i {
+  color: #808080;
+}
+nav.nav__sticky .main__nav .nav__icon i:hover {
+  color: #9ce0ff;
+  cursor: pointer;
 }
 
 .title {

@@ -10,6 +10,29 @@
         width: 70%;
     }
 }
+.back__top{
+    display: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    background-color: $mainColor;
+    color: $textWhite;
+    font-size: $fontNormal;
+    outline: none;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    i{
+        font-size: $fontMedium;
+        display: block;
+    }
+    &.back__top--active{
+        display: block;
+    }
+}
+
 section{
     margin: 80px 0;
 }
