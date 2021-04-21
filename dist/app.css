@@ -482,7 +482,6 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
 }
 
 #plans {
-  border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
   background-image: url("../img/page-background-img.png");
   background-size: cover;
@@ -522,8 +521,8 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   margin-bottom: 10px;
 }
 #plans .plans__box .plans__choose:hover {
-  background-color: rgba(156, 224, 255, 0.2);
-  border-color: rgba(64, 196, 255, 0.6);
+  background-color: rgba(156, 224, 255, 0.1);
+  border-color: rgba(64, 196, 255, 0.4);
 }
 #plans .plans__box .plans__background {
   background-color: rgba(156, 224, 255, 0.1);

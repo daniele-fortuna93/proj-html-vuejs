@@ -1,363 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons.ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons.ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons.ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons.ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons.ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons.ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons.ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons.ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons.ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons.ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons.ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons.ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons.ico/favicon-16x16.png">
-    <link rel="manifest" href="img/favicons.ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- /favicon -->
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
-    <!-- /google font -->
-    <!-- vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <!-- /vue -->
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <!-- /font awesome -->
-    <link rel="stylesheet" href="dist/app.css">
-    <title>iAcademy</title>
-</head>
-<body>
-    <div id="root" >
-        <!-- header -->
-        <header :class=" 'background--' + dotIndex">
-            <!-- nav -->
-            <div class="container">
-                <nav :class="navWhite == false ? 'nav__sticky' : ''">
-                    <div class="logo">
-                        <img src="img/logo-light.png" alt="" v-if="navWhite">
-                        <img src="img/logo-default.png" alt="" v-else>
-                    </div>
-                    <div class="main__nav">
-                        <ul class="nav__link">
-                            <li v-for="link in linkNav">
-                                <a href="#">{{ link }}</a>
-                            </li>
-                        </ul>
-                        <div class="nav__icon">
-                            <i class="fas fa-search"></i>
-                            <i class="fas fa-shopping-bag article--bag"></i>
-                            <i class="fas fa-bars"></i>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons.ico/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons.ico/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons.ico/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons.ico/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons.ico/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons.ico/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons.ico/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons.ico/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons.ico/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons.ico/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicons.ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicons.ico/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicons.ico/favicon-16x16.png">
+        <link rel="manifest" href="img/favicons.ico/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- /favicon -->
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+        <!-- /google font -->
+        <!-- vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <!-- /vue -->
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <!-- /font awesome -->
+        <link rel="stylesheet" href="dist/app.css">
+        <title>iAcademy</title>
+    </head>
+    <body>
+        <div id="root" >
+            <!-- header -->
+            <header :class=" 'background--' + dotIndex">
+                <!-- nav -->
+                <div class="container">
+                    <nav :class="navWhite == false ? 'nav__sticky' : ''">
+                        <div class="logo">
+                            <img src="img/logo-light.png" alt="" v-if="navWhite">
+                            <img src="img/logo-default.png" alt="" v-else>
                         </div>
-                    </div>
-                        
-                </nav>
-            </div>
-            <div class="title">
-                <h1>Contemporary Ideas</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolor dolore sunt, eius explicabo corporis? Inventore, quae rerum! explicabo corporis? Inventore, quae rerum!
-                </p>
-                <button class="btn btn--active">Register Now</button>
-            </div>
-            <!-- /nav -->
-            <div class="dots">
-                <div  @click="sliderBack(dot)" v-for=" dot in 3" class="dot" :class=" dot == dotIndex ? 'dot--active' : '' "></div>
-            </div>
-        </header>
-        <!-- /header -->
-        <button @click="scrollTop" class="back__top" :class="topPageVisible ? 'back__top--active' : ''">
-            <i class="fas fa-angle-up"></i>top
-        </button>
-        <!-- main -->
-        <main>
-            <!-- categories -->
-            <section id="categories">
+                        <div class="main__nav">
+                            <ul class="nav__link">
+                                <li v-for="link in linkNav">
+                                    <a href="#">{{ link }}</a>
+                                </li>
+                            </ul>
+                            <div class="nav__icon">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-shopping-bag article--bag"></i>
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                            
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Contemporary Ideas</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolor dolore sunt, eius explicabo corporis? Inventore, quae rerum! explicabo corporis? Inventore, quae rerum!
+                    </p>
+                    <button class="btn btn--active">Register Now</button>
+                </div>
+                <!-- /nav -->
+                <div class="dots">
+                    <div  @click="sliderBack(dot)" v-for=" dot in 3" class="dot" :class=" dot == dotIndex ? 'dot--active' : '' "></div>
+                </div>
+            </header>
+            <!-- /header -->
+            <button @click="scrollTop" class="back__top" :class="topPageVisible ? 'back__top--active' : ''">
+                <i class="fas fa-angle-up"></i>top
+            </button>
+            <!-- main -->
+            <main>
+                <!-- categories -->
+                <section id="categories">
 
-                <div class="categories__box container">
-                    <div v-for="category in categoriesList" class="category">
-                        <img :src="'img/h5-custom-icon-' + category.icon" alt="">
-                        <h4>{{ category.name }}</h4>
+                    <div class="categories__box container">
+                        <div v-for="category in categoriesList" class="category">
+                            <img :src="'img/h5-custom-icon-' + category.icon" alt="">
+                            <h4>{{ category.name }}</h4>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <!-- /categories -->
-            <!-- home tutoring -->
-            <section id="home-tutoring">
-                <div class="home-tutoring__box container">
-                    <h3>The Trusted Name <br> for In-Home Tutoring</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus corrupti quos et dolorem veniam, accusantium eveniet sequi nam odio? Voluptatibus sequi consectetur nostrum praesentium facilis ipsum similique, quod voluptas debitis.</p>
-                    <a href="#">Learn More</a>
-                     <img src="img/h5-img-1.jpg" alt="">
-                </div>
-                
-            </section>
-            <!-- home tutoring -->
-            <!-- section empower -->
-            <section id="empower">
-                <div class="empower__box container">
-                    <div class="empower__img">
-                        <img src="img/h5-img-2.jpg" alt="">
+                </section>
+                <!-- /categories -->
+                <!-- home tutoring -->
+                <section id="home-tutoring">
+                    <div class="home-tutoring__box container">
+                        <h3>The Trusted Name <br> for In-Home Tutoring</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus corrupti quos et dolorem veniam, accusantium eveniet sequi nam odio? Voluptatibus sequi consectetur nostrum praesentium facilis ipsum similique, quod voluptas debitis.</p>
+                        <a href="#">Learn More</a>
+                        <img src="img/h5-img-1.jpg" alt="">
                     </div>
-                    <div class="empower__text">
-                        <h3>Empowering Children to Reach Their Potential</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reiciendis voluptas maxime architecto. Eveniet, est obcaecati deserunt dolorum sunt dolores recusandae optio, dignissimos rerum adipisci laboriosam quasi velit. Suscipit, cumque.</p>
-                        <div class="empower__numbers">
-                            <div class="numbers">
-                                <p><strong>168</strong></p>
-                                <span>User Stories</span>
-                            </div>
-                            <div class="numbers">
-                                <p><strong>347</strong></p>
-                                <span>Events</span>
+                    
+                </section>
+                <!-- home tutoring -->
+                <!-- section empower -->
+                <section id="empower">
+                    <div class="empower__box container">
+                        <div class="empower__img">
+                            <img src="img/h5-img-2.jpg" alt="">
+                        </div>
+                        <div class="empower__text">
+                            <h3>Empowering Children to Reach Their Potential</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reiciendis voluptas maxime architecto. Eveniet, est obcaecati deserunt dolorum sunt dolores recusandae optio, dignissimos rerum adipisci laboriosam quasi velit. Suscipit, cumque.</p>
+                            <div class="empower__numbers">
+                                <div class="numbers">
+                                    <p><strong>168</strong></p>
+                                    <span>User Stories</span>
+                                </div>
+                                <div class="numbers">
+                                    <p><strong>347</strong></p>
+                                    <span>Events</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- /section empower -->
-            <!-- reviews -->
-            <section id="reviews">
-                <div v-for="(student, index) in studentReviews" class="reviews__box" v-if="index == (dotReviews - 1)">
-                    <img :src="'img/testimonials-standard-' + student.img" alt="">
-                    <p>{{ student.reviews }}</p>
-                    <h4>{{ student.name }}</h4>
-                    <span>STUDENT</span>
-                </div>
-                <div class="bullet">
-                    <span :class="dot == dotReviews ? 'bullet__dot--active' : ''"@click="dotReviews = dot" class="bullet__dot dot__white" v-for="dot in studentReviews.length"></span>
-                </div>
-            </section>
-            <!-- reviews -->
-            <!-- possibilities -->
-            <section id="possibilities">
-                <div class="possibilities__box container">
-                    <div  class="list__choose">
-                        <ul>
-                            <li v-for="(choose, index) in listChoose">
-                                <button :class="index == indexChoose ? 'button__choose--active' : ''"@click="indexChoose = index"class="button__choose" >{{ choose.name }}</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="list__box">
-                        <div v-if="index == indexChoose"v-for="(content, index) in listChoose" class="choose__content">
-                            <h3>{{ content.title }}</h3>
-                            <p class="content__text">{{ content.text }}</p>
-                            <p v-for="service in content.services"><i class="fas fa-check"></i> {{ service }}</p>
-                            <img :src="'img/h12-tabs-icon-' + content.img" alt="">
-                        </div>
-                    </div>   
-                </div>
-            </section>
-            <!-- /possibilities -->
-            <!-- courses -->
-            <section id="courses">
-                <div class="container container--small section__title">
-                    <h3>Popular Online Courses</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex labore, repellat autem modi vel! Aliquam corrupti quos iusto </p>
-                </div>
-                <div class="container courses__box">
-                    <div v-for="course in listCourses[indexCourses]" class="card">
-                        <img :src="'img/course-' + course.img + '-f-img.jpg'" alt="">
-                        <div class="card__content">
-                            <div class="card__title">
-                                <h4>{{ course.title }}</h4>
-                                <span :class=" course.price == 'Free' ? 'free' : ''">{{ course.price }}</span>
-                            </div>
-                            
-                            <span class="teacher__name">{{ course.name }}</span>
-                            <p>{{ course.content }}</p>
-                            <div class="card__info">
-                                <span><i class="fas fa-user"></i> 1</span>
-                                <span><i class="fas fa-tag"></i> {{ course.type }}</span>
-                            </div>
-                            
-                        </div>
+                </section>
+                <!-- /section empower -->
+                <!-- reviews -->
+                <section id="reviews">
+                    <div v-for="(student, index) in studentReviews" class="reviews__box" v-if="index == (dotReviews - 1)">
+                        <img :src="'img/testimonials-standard-' + student.img" alt="">
+                        <p>{{ student.reviews }}</p>
+                        <h4>{{ student.name }}</h4>
+                        <span>STUDENT</span>
                     </div>
                     <div class="bullet">
-                        <span @click="indexCourses = index" v-for="( dot, index ) in listCourses.length" class="bullet__dot dot__main--color" :class="indexCourses == index ? 'bullet__dot--active' : ''"></span>
+                        <span :class="dot == dotReviews ? 'bullet__dot--active' : ''"@click="dotReviews = dot" class="bullet__dot dot__white" v-for="dot in studentReviews.length"></span>
                     </div>
-                </div>
-                
-
-            </section>
-            <!-- /courses -->
-            <!-- plans -->
-            <section id="plans">
-                <div class="container container--small section__title">
-                    <h3>Pricing Plans</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem at fuga veritatis sapiente, labore </p>
-                </div>
-                <div class="container plans__box">
-                    <ul class="plans__list">
-                        <li>
-                            <img src="img/h5-custom-icon-7.png" alt="">
-                            <h4>Save up to 40% by paying weekly</h4>
-                        </li>
-                        
-                        <li>Number of Courses</li>
-                        <li>Time</li>
-                        <li>Web Designing</li>
-                        <li>Human-Centered Design</li>
-                        <li>Basic Marketing</li>
-                        <li>Python for Everybody</li>
-                        <li>Android Developer</li>
-                        <li>Business English</li>
-                    </ul>
-                    <ul  v-for="(plan, index) in listPlans" class="plans__list plans__choose" :class="planSelected == index ? 'border--active' : ''">
-                        <li class="plans__background">
-                            <img :src="'img/h5-custom-icon-' + plan.img" alt="">
-                            <h4>{{ plan.name }}</h4>
-                            <span>${{ plan.price}}</span>
-                        </li>
-                        <li>{{ plan.courses }}</li>
-                        <li>{{ plan.time }} Days</li>
-                        <li><span v-if="plan.webDesigning"><i class="fas fa-check check--blue"></i></span></i><span v-else><i class="fas fa-times"></i></span></li>
-                        <li><span v-if="plan.humanDesign"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
-                        <li><span v-if="plan.basicMarketing"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
-                        <li><span v-if="plan.python"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
-                        <li><span v-if="plan.android"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
-                        <li><span v-if="plan.businessEnglish"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
-                        <li class="plans__background"><button @click="planSelected = index":class="planSelected == index ? 'btn--active' : ''"class="btn">Get it now</button></li>
-                    </ul>
-
-                </div>
-            </section>
-            <!-- /plans -->
-            <!-- affiliates -->
-            <section id="affiliates">
-                <div class="container">
-                    <ul  class="box__affiliates">
-                        <li v-for="client in listAffiliates">
-                            <img :src="'img/h5-client-' + client" alt="">
-                        </li>
-                    </ul>
+                </section>
+                <!-- reviews -->
+                <!-- possibilities -->
+                <section id="possibilities">
+                    <div class="possibilities__box container">
+                        <div  class="list__choose">
+                            <ul>
+                                <li v-for="(choose, index) in listChoose">
+                                    <button :class="index == indexChoose ? 'button__choose--active' : ''"@click="indexChoose = index"class="button__choose" >{{ choose.name }}</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list__box">
+                            <div v-if="index == indexChoose"v-for="(content, index) in listChoose" class="choose__content">
+                                <h3>{{ content.title }}</h3>
+                                <p class="content__text">{{ content.text }}</p>
+                                <p v-for="service in content.services"><i class="fas fa-check"></i> {{ service }}</p>
+                                <img :src="'img/h12-tabs-icon-' + content.img" alt="">
+                            </div>
+                        </div>   
+                    </div>
+                </section>
+                <!-- /possibilities -->
+                <!-- courses -->
+                <section id="courses">
+                    <div class="container container--small section__title">
+                        <h3>Popular Online Courses</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex labore, repellat autem modi vel! Aliquam corrupti quos iusto </p>
+                    </div>
+                    <div class="container courses__box">
+                        <div v-for="course in listCourses[indexCourses]" class="card">
+                            <img :src="'img/course-' + course.img + '-f-img.jpg'" alt="">
+                            <div class="card__content">
+                                <div class="card__title">
+                                    <h4>{{ course.title }}</h4>
+                                    <span :class=" course.price == 'Free' ? 'free' : ''">{{ course.price }}</span>
+                                </div>
+                                
+                                <span class="teacher__name">{{ course.name }}</span>
+                                <p>{{ course.content }}</p>
+                                <div class="card__info">
+                                    <span><i class="fas fa-user"></i> 1</span>
+                                    <span><i class="fas fa-tag"></i> {{ course.type }}</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="bullet">
+                            <span @click="indexCourses = index" v-for="( dot, index ) in listCourses.length" class="bullet__dot dot__main--color" :class="indexCourses == index ? 'bullet__dot--active' : ''"></span>
+                        </div>
+                    </div>
                     
-                </div>
-            </section>
-            <!-- /affiliates -->
 
-        </main>
-        <!-- /main -->
-        <!-- footer -->
-        <footer>
-            <div class="container">
-                <div class="footer__link">
-                    <ul>
-                        <li>
-                            
-                                <img src="img/footer-logo-1.png" alt="">
-                            
-                        </li>
-                        <li>
-                            Providing Life Changing Experiences Through Education. Class Tha Fit Your Busy Life. Closer to Home
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:1-677-124-44227">1-677-124-44227</a>
-                        </li>
-                        <li>
-                            <i class="far fa-clock"></i>
-                            Mon - Sat 8.00 - 18.00
-                        </li>
-                        
-                    </ul>
-                    <ul>
-                        <li>Popular Courses</li>
-                        <li>
-                            <p>
-                                <a href="#">Business English</a> 
-                                <a href="#"><span>Preston Marshall</span></a>
-                            </p>
-                            
-                        </li>
-                        <li>
-                            <p>
-                                <a href="#">Social Computing</a>
-                                <a href="#"><span>David Sanders</span></a>
-                            </p>
-                            
-                        </li>
-                        <li>
-                            <p>
-                                <a href="#">Learn Spanish</a>
-                                <a href="#"><span>Jennie King</span></a>
-                            </p>
-                            
-                        </li>
-                        
-                    </ul>
-                    <ul>
-                        <li>
-                            Support
-                        </li>
-                        <li>
-                            <a href="#">User Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="#">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#">Course Offer</a>
-                        </li>
-                        <li>
-                            <a href="#">Events</a>
-                        </li>
-                        
-                    </ul>
-                    <ul>
-                        <li>
-                            Flexible Learning
-                        </li>
-                        <li>
-                            <img src="img/footer-img-1.png" alt="">
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="footer__bottom">
-                    <div class="copyright">
-                        Copyrights 2017 ©Mikado Themes
+                </section>
+                <!-- /courses -->
+                <!-- plans -->
+                <section id="plans">
+                    <div class="container container--small section__title">
+                        <h3>Pricing Plans</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem at fuga veritatis sapiente, labore </p>
                     </div>
-                    <div class="contacts">
-                        <span>CALL +44 300 303 0266</span>
-                        <span>FOLLOW US</span> 
-                        <ul>
+                    <div class="container plans__box">
+                        <ul class="plans__list">
                             <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
+                                <img src="img/h5-custom-icon-7.png" alt="">
+                                <h4>Save up to 40% by paying weekly</h4>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
+                            
+                            <li>Number of Courses</li>
+                            <li>Time</li>
+                            <li>Web Designing</li>
+                            <li>Human-Centered Design</li>
+                            <li>Basic Marketing</li>
+                            <li>Python for Everybody</li>
+                            <li>Android Developer</li>
+                            <li>Business English</li>
+                        </ul>
+                        <ul  v-for="(plan, index) in listPlans" class="plans__list plans__choose" :class="planSelected == index ? 'border--active' : ''">
+                            <li class="plans__background">
+                                <img :src="'img/h5-custom-icon-' + plan.img" alt="">
+                                <h4>{{ plan.name }}</h4>
+                                <span>${{ plan.price}}</span>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
+                            <li>{{ plan.courses }}</li>
+                            <li>{{ plan.time }} Days</li>
+                            <li><span v-if="plan.webDesigning"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                            <li><span v-if="plan.humanDesign"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                            <li><span v-if="plan.basicMarketing"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                            <li><span v-if="plan.python"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                            <li><span v-if="plan.android"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                            <li><span v-if="plan.businessEnglish"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
+                            <li class="plans__background"><button @click="planSelected = index":class="planSelected == index ? 'btn--active' : ''"class="btn">Get it now</button></li>
+                        </ul>
+
+                    </div>
+                </section>
+                <!-- /plans -->
+                <!-- affiliates -->
+                <section id="affiliates">
+                    <div class="container">
+                        <ul  class="box__affiliates">
+                            <li v-for="client in listAffiliates">
+                                <img :src="'img/h5-client-' + client" alt="">
                             </li>
                         </ul>
                         
                     </div>
+                </section>
+                <!-- /affiliates -->
+
+            </main>
+            <!-- /main -->
+            <!-- footer -->
+            <footer>
+                <div class="container">
+                    <div class="footer__link">
+                        <ul>
+                            <li>
+                                
+                                    <img src="img/footer-logo-1.png" alt="">
+                                
+                            </li>
+                            <li>
+                                Providing Life Changing Experiences Through Education. Class Tha Fit Your Busy Life. Closer to Home
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:1-677-124-44227">1-677-124-44227</a>
+                            </li>
+                            <li>
+                                <i class="far fa-clock"></i>
+                                Mon - Sat 8.00 - 18.00
+                            </li>
+                            
+                        </ul>
+                        <ul>
+                            <li>Popular Courses</li>
+                            <li>
+                                <p>
+                                    <a href="#">Business English</a> 
+                                    <a href="#"><span>Preston Marshall</span></a>
+                                </p>
+                                
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="#">Social Computing</a>
+                                    <a href="#"><span>David Sanders</span></a>
+                                </p>
+                                
+                            </li>
+                            <li>
+                                <p>
+                                    <a href="#">Learn Spanish</a>
+                                    <a href="#"><span>Jennie King</span></a>
+                                </p>
+                                
+                            </li>
+                            
+                        </ul>
+                        <ul>
+                            <li>
+                                Support
+                            </li>
+                            <li>
+                                <a href="#">User Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Course Offer</a>
+                            </li>
+                            <li>
+                                <a href="#">Events</a>
+                            </li>
+                            
+                        </ul>
+                        <ul>
+                            <li>
+                                Flexible Learning
+                            </li>
+                            <li>
+                                <img src="img/footer-img-1.png" alt="">
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="copyright">
+                            Copyrights 2017 ©Mikado Themes
+                        </div>
+                        <div class="contacts">
+                            <span>CALL +44 300 303 0266</span>
+                            <span>FOLLOW US</span> 
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </footer>
-        <!-- /footer -->
-    </div>
-    <script src="js/script.js"></script>
-</body>
+            </footer>
+            <!-- /footer -->
+        </div>
+        <script src="js/script.js"></script>
+    </body>
 </html>
