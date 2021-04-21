@@ -7,6 +7,9 @@
     .container{
         width: $containerSmall;
     }
+    h3{
+        font-size: 35px;
+    }
     h4{
         font-size: $fontNormal;
     }
@@ -18,7 +21,16 @@
     nav{
         .main__nav{
             font-size: $fontSmall;
+            .nav__link{
+                li{
+                    margin-right: 25px;
+                }
+            }
+            .nav__icon{
+                display: none;
+            }
         }
+
     }
     
 }
@@ -26,4 +38,43 @@
     .container{
         width: $containerUltraSmall;
     }
+    // header
+    .logo{
+        width: 25%;
+        img{
+            width: 80%;
+        }
+    }
+    // /header
+    // categories
+    .categories__box{
+        .category{
+            padding: 30px 0;
+        }
+        h4{
+            font-size: $fontSmall;
+        }
+    }
+    // /categories
+    // empower
+    .empower__box{
+        .empower__numbers{
+            p{
+                font-size: 30px;
+            }
+        }
+    } 
+    // /empower
+    // possibilities
+    .possibilities__box{
+        .list__box{
+            .choose__content{
+                img{
+                    width: 100px;
+                    bottom: -100px;
+                }
+            }
+        }
+    }
+    // /possibilities
 }

@@ -442,6 +442,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 #courses .courses__box .card .card__title h4 {
   font-size: 22px;
@@ -455,6 +456,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   width: 70px;
   padding: 5px 0;
   background-color: #40c4ff;
+  margin: 6px 0;
 }
 #courses .courses__box .card .card__title .free {
   background-color: #ffd740;
@@ -596,7 +598,7 @@ footer {
   font-size: 22px;
 }
 .footer__link ul li:first-child img {
-  width: 40%;
+  width: 160px;
 }
 .footer__link ul li i {
   margin-right: 8px;
@@ -638,6 +640,10 @@ footer {
     width: 1100px;
   }
 
+  h3 {
+    font-size: 35px;
+  }
+
   h4 {
     font-size: 17px;
   }
@@ -649,9 +655,38 @@ footer {
   nav .main__nav {
     font-size: 14px;
   }
+  nav .main__nav .nav__link li {
+    margin-right: 25px;
+  }
+  nav .main__nav .nav__icon {
+    display: none;
+  }
 }
 @media screen and (max-width: 1200px) {
   .container {
     width: 800px;
+  }
+
+  .logo {
+    width: 25%;
+  }
+  .logo img {
+    width: 80%;
+  }
+
+  .categories__box .category {
+    padding: 30px 0;
+  }
+  .categories__box h4 {
+    font-size: 14px;
+  }
+
+  .empower__box .empower__numbers p {
+    font-size: 30px;
+  }
+
+  .possibilities__box .list__box .choose__content img {
+    width: 100px;
+    bottom: -100px;
   }
 }

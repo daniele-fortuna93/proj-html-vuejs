@@ -22,6 +22,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                align-items: center;
                 h4{
                     font-size: 22px;
                 }
@@ -34,7 +35,7 @@
                     width: 70px;
                     padding: 5px 0;
                     background-color: $mainColor;
-                    
+                    margin: 6px 0;
                 }
                 .free{
                     background-color: #ffd740;
