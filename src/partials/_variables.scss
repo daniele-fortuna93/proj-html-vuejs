@@ -28,3 +28,12 @@ $containerNormal: 1600px;
 $containerMedium: 1350px;
 $containerSmall: 1100px;
 $containerUltraSmall: 800px;
+
+// mixin
+@mixin positionAbsolute ($top, $right, $bottom, $left) {
+    position: absolute; 
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+ }

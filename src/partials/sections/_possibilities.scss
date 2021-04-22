@@ -51,10 +51,8 @@
                 margin-bottom: 50px;
             }
             img{
-                position: absolute;
+                @include positionAbsolute ( auto, 30px, -80px, auto);
                 width: 150px;
-                bottom: -80px;
-                right: 30px;
             }
         }
         

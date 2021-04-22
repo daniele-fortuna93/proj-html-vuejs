@@ -59,7 +59,6 @@
                                 <i class="fas fa-bars"></i>
                             </div>
                         </div>
-                            
                     </nav>
                 </div>
                 <div class="title">
@@ -82,7 +81,6 @@
             <main>
                 <!-- categories -->
                 <section id="categories">
-
                     <div class="categories__box container">
                         <div v-for="category in categoriesList" class="category">
                             <img :src="'img/h5-custom-icon-' + category.icon" alt="">
@@ -99,7 +97,6 @@
                         <a href="#">Learn More</a>
                         <img src="img/h5-img-1.jpg" alt="">
                     </div>
-                    
                 </section>
                 <!-- home tutoring -->
                 <!-- section empower -->
@@ -173,22 +170,18 @@
                                     <h4>{{ course.title }}</h4>
                                     <span :class=" course.price == 'Free' ? 'free' : ''">{{ course.price }}</span>
                                 </div>
-                                
                                 <span class="teacher__name">{{ course.name }}</span>
                                 <p>{{ course.content }}</p>
                                 <div class="card__info">
                                     <span><i class="fas fa-user"></i> 1</span>
                                     <span><i class="fas fa-tag"></i> {{ course.type }}</span>
                                 </div>
-                                
                             </div>
                         </div>
                         <div class="bullet">
                             <span @click="indexCourses = index" v-for="( dot, index ) in listCourses.length" class="bullet__dot dot__main--color" :class="indexCourses == index ? 'bullet__dot--active' : ''"></span>
                         </div>
                     </div>
-                    
-
                 </section>
                 <!-- /courses -->
                 <!-- plans -->
@@ -203,7 +196,6 @@
                                 <img src="img/h5-custom-icon-7.png" alt="">
                                 <h4>Save up to 40% by paying weekly</h4>
                             </li>
-                            
                             <li>Number of Courses</li>
                             <li>Time</li>
                             <li>Web Designing</li>
@@ -229,7 +221,6 @@
                             <li><span v-if="plan.businessEnglish"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
                             <li class="plans__background"><button @click="planSelected = index":class="planSelected == index ? 'btn--active' : ''"class="btn">Get it now</button></li>
                         </ul>
-
                     </div>
                 </section>
                 <!-- /plans -->
@@ -241,7 +232,6 @@
                                 <img :src="'img/h5-client-' + client" alt="">
                             </li>
                         </ul>
-                        
                     </div>
                 </section>
                 <!-- /affiliates -->
@@ -252,11 +242,10 @@
             <footer>
                 <div class="container">
                     <div class="footer__link">
+                        <!-- lista contatti -->
                         <ul>
                             <li>
-                                
                                     <img src="img/footer-logo-1.png" alt="">
-                                
                             </li>
                             <li>
                                 Providing Life Changing Experiences Through Education. Class Tha Fit Your Busy Life. Closer to Home
@@ -269,8 +258,8 @@
                                 <i class="far fa-clock"></i>
                                 Mon - Sat 8.00 - 18.00
                             </li>
-                            
                         </ul>
+                        <!-- lista corsi -->
                         <ul>
                             <li>Popular Courses</li>
                             <li>
@@ -278,24 +267,21 @@
                                     <a href="#">Business English</a> 
                                     <a href="#"><span>Preston Marshall</span></a>
                                 </p>
-                                
                             </li>
                             <li>
                                 <p>
                                     <a href="#">Social Computing</a>
                                     <a href="#"><span>David Sanders</span></a>
                                 </p>
-                                
                             </li>
                             <li>
                                 <p>
                                     <a href="#">Learn Spanish</a>
                                     <a href="#"><span>Jennie King</span></a>
                                 </p>
-                                
                             </li>
-                            
                         </ul>
+                        <!-- lista support -->
                         <ul>
                             <li>
                                 Support
@@ -315,8 +301,8 @@
                             <li>
                                 <a href="#">Events</a>
                             </li>
-                            
                         </ul>
+                        <!-- map footer -->
                         <ul>
                             <li>
                                 Flexible Learning
@@ -324,7 +310,6 @@
                             <li>
                                 <img src="img/footer-img-1.png" alt="">
                             </li>
-                            
                         </ul>
                     </div>
                     <div class="footer__bottom">
