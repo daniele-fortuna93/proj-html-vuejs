@@ -17,7 +17,7 @@
   cursor: pointer;
   text-transform: uppercase;
   border: none;
-  background-color: #40c4ff;
+  background-color: #045D8C;
   color: #ffffff;
   font-size: 17px;
   outline: none;
@@ -67,7 +67,7 @@ section {
   background-color: #ffffff;
 }
 .bullet .bullet__dot.dot__main--color {
-  background-color: #40c4ff;
+  background-color: #045D8C;
 }
 
 body {
@@ -99,13 +99,13 @@ h4 {
   cursor: pointer;
 }
 .btn--active {
-  border-color: #40c4ff;
-  background-color: #40c4ff;
+  border-color: #045D8C;
+  background-color: #045D8C;
   color: #ffffff;
 }
 .btn--active:hover {
-  border-color: #9ce0ff;
-  background-color: #9ce0ff;
+  border-color: #55acee;
+  background-color: #55acee;
 }
 
 header {
@@ -145,14 +145,14 @@ nav .main__nav .nav__link li a {
   text-decoration: none;
 }
 nav .main__nav .nav__link li a:hover {
-  color: #40c4ff;
+  color: #045D8C;
   cursor: pointer;
 }
 nav .main__nav .nav__icon i:not(:last-child) {
   margin-right: 20px;
 }
 nav .main__nav .nav__icon i:hover {
-  color: #9ce0ff;
+  color: #55acee;
   cursor: pointer;
 }
 nav .main__nav .nav__icon .article--bag {
@@ -172,7 +172,7 @@ nav .main__nav .nav__icon .article--bag:after {
   height: 15px;
   line-height: 15px;
   border-radius: 50%;
-  background-color: #40c4ff;
+  background-color: #045D8C;
 }
 nav.nav__sticky {
   position: fixed;
@@ -186,14 +186,14 @@ nav.nav__sticky .main__nav .nav__link li a {
   color: #808080;
 }
 nav.nav__sticky .main__nav .nav__link li a:hover {
-  color: #40c4ff;
+  color: #045D8C;
   cursor: pointer;
 }
 nav.nav__sticky .main__nav .nav__icon i {
   color: #808080;
 }
 nav.nav__sticky .main__nav .nav__icon i:hover {
-  color: #9ce0ff;
+  color: #55acee;
   cursor: pointer;
 }
 
@@ -283,7 +283,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   margin-bottom: 15px;
 }
 .categories__box .category:hover {
-  border-color: #40c4ff;
+  border-color: #045D8C;
 }
 
 .home-tutoring__box p {
@@ -294,13 +294,13 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
 }
 .home-tutoring__box a {
   font-size: 17px;
-  color: #40c4ff;
+  color: #045D8C;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
 }
 .home-tutoring__box a:hover {
-  color: #9ce0ff;
+  color: #55acee;
 }
 .home-tutoring__box img {
   width: 100%;
@@ -328,11 +328,11 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   justify-content: space-between;
   width: 60%;
   margin-top: 40px;
-  color: #40c4ff;
+  color: #045D8C;
 }
 .empower__box .empower__numbers p {
   font-size: 45px;
-  color: #40c4ff;
+  color: #045D8C;
   margin-bottom: 20px;
 }
 
@@ -393,9 +393,9 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   color: #808080;
 }
 .possibilities__box .list__choose .button__choose.button__choose--active, .possibilities__box .list__choose .button__choose:hover {
-  border-color: #40c4ff;
+  border-color: #045D8C;
   background-color: #f7fdff;
-  color: #40c4ff;
+  color: #045D8C;
 }
 .possibilities__box .list__choose .button__choose:hover {
   cursor: pointer;
@@ -412,7 +412,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   margin-bottom: 30px;
 }
 .possibilities__box .list__box .choose__content p i {
-  color: #40c4ff;
+  color: #045D8C;
   margin-right: 5px;
 }
 .possibilities__box .list__box .choose__content .content__text {
@@ -467,7 +467,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   border-radius: 20px;
   width: 70px;
   padding: 5px 0;
-  background-color: #40c4ff;
+  background-color: #045D8C;
   margin: 6px 0;
 }
 #courses .courses__box .card .card__title .free {
@@ -506,7 +506,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   display: flex;
 }
 #plans .plans__box .plans__list {
-  border-top: 4px solid rgba(64, 196, 255, 0.3);
+  border-top: 4px solid rgba(4, 93, 140, 0.3);
   text-align: center;
   width: 25%;
 }
@@ -517,7 +517,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   border: 1px solid #efefef;
 }
 #plans .plans__box .plans__list li .check--blue {
-  color: #40c4ff;
+  color: #045D8C;
 }
 #plans .plans__box .plans__list li:first-child {
   padding: 25px;
@@ -535,14 +535,14 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   margin-bottom: 10px;
 }
 #plans .plans__box .plans__choose:hover {
-  background-color: rgba(156, 224, 255, 0.1);
-  border-color: rgba(64, 196, 255, 0.4);
+  background-color: rgba(85, 172, 238, 0.1);
+  border-color: rgba(4, 93, 140, 0.4);
 }
 #plans .plans__box .plans__background {
-  background-color: rgba(156, 224, 255, 0.1);
+  background-color: rgba(85, 172, 238, 0.1);
 }
 #plans .plans__box .border--active {
-  border-color: #40c4ff;
+  border-color: #045D8C;
 }
 #plans .plans__box .plans__list:first-child {
   text-align: left;
