@@ -50,7 +50,7 @@
                         <div class="main__nav">
                             <ul class="nav__link">
                                 <li v-for="link in linkNav">
-                                    <a href="#">{{ link }}</a>
+                                    <a :href="link.href">{{ link.name }}</a>
                                 </li>
                             </ul>
                             <div class="nav__icon">

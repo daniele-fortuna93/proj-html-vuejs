@@ -3,7 +3,32 @@ var app = new Vue (
     {
         el: '#root',
         data: {
-            linkNav: ['HOME', 'COURSES', 'INSTRUCTORS', 'EVENTS', 'PAGES', 'ELEMENTS'],
+            linkNav: [
+                {
+                name: 'HOME',
+                href: '#'
+                },
+                {
+                    name: 'COURSES',
+                    href: '#'
+                },
+                {
+                    name: 'INSTRUCTORS',
+                    href: '#'
+                },
+                {
+                    name: 'EVENTS',
+                    href: '#'
+                },
+                {
+                    name: 'PAGES',
+                    href: '#'
+                },
+                {
+                    name: 'ELEMENTS',
+                    href: '#'
+                }
+            ],
             dotIndex: 1,
             dotReviews: 1,
             categoriesList:[
@@ -315,7 +340,7 @@ var app = new Vue (
                     this.dotIndex++;
                 }
                 
-            }, 3000);
+            }, 4000);
             this.autoplayReviews = setInterval( ()=> {
                 if ( this.dotReviews == 3){
                     this.dotReviews = 1;
