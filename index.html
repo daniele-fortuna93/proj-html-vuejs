@@ -55,7 +55,24 @@
                             </ul>
                             <div class="nav__icon">
                                 <i class="fas fa-search"></i>
-                                <i class="fas fa-shopping-bag article--bag"></i>
+                                <i class="fas fa-shopping-bag article--bag" @click="show = !show">
+                                    <div class="tot__articles">{{ shopBag.length }}</div>
+                                    <transition name="fade">
+                                        <div v-if="show" class="cart">
+                                            <ul>
+                                                <li v-for="(article, index) in shopBag">
+                                                    <span><i class="fas fa-minus" @click="removeArticle(article, index)"></i> {{ article.title }}</span>
+                                                    <span>{{ article.type }}</span>
+                                                    <span>$ {{ article.price }}</span>
+                                                    
+                                                </li>
+                                                <li class="total"><span>$ {{ totalPrice }}</span></li>
+                                            </ul>
+        
+                                        </div>
+                                    </transition>
+                                </i>
+                                
                                 <i class="fas fa-bars"></i>
                             </div>
                         </div>
@@ -168,7 +185,7 @@
                             <div class="card__content">
                                 <div class="card__title">
                                     <h4>{{ course.title }}</h4>
-                                    <span :class=" course.price == 'Free' ? 'free' : ''">{{ course.price }}</span>
+                                    <span :class=" course.price == 0 ? 'free' : ''" @click="addArticle(course)">{{ course.price == 0  ? 'Free' : '$' + course.price }}</span>
                                 </div>
                                 <span class="teacher__name">{{ course.name }}</span>
                                 <p>{{ course.content }}</p>
@@ -205,7 +222,7 @@
                             <li>Android Developer</li>
                             <li>Business English</li>
                         </ul>
-                        <ul  v-for="(plan, index) in listPlans" class="plans__list plans__choose" :class="planSelected == index ? 'border--active' : ''">
+                        <ul   @click="planSelected = index" v-for="(plan, index) in listPlans" class="plans__list plans__choose" :class="planSelected == index ? 'border--active' : ''">
                             <li class="plans__background">
                                 <img :src="'img/h5-custom-icon-' + plan.img" alt="">
                                 <h4>{{ plan.name }}</h4>
@@ -219,7 +236,7 @@
                             <li><span v-if="plan.python"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
                             <li><span v-if="plan.android"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
                             <li><span v-if="plan.businessEnglish"><i class="fas fa-check check--blue"></i></span><span v-else><i class="fas fa-times"></i></span></li>
-                            <li class="plans__background"><button @click="planSelected = index":class="planSelected == index ? 'btn--active' : ''"class="btn">Get it now</button></li>
+                            <li class="plans__background"><button :class="planSelected == index ? 'btn--active' : ''"class="btn">Get it now</button></li>
                         </ul>
                     </div>
                 </section>

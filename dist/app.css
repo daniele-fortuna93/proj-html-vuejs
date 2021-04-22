@@ -159,8 +159,7 @@ nav .main__nav .nav__icon i:hover {
 nav .main__nav .nav__icon .article--bag {
   position: relative;
 }
-nav .main__nav .nav__icon .article--bag:after {
-  content: "0";
+nav .main__nav .nav__icon .article--bag .tot__articles {
   font-size: 13px;
   text-align: center;
   display: block;
@@ -169,11 +168,47 @@ nav .main__nav .nav__icon .article--bag:after {
   right: -8px;
   bottom: auto;
   left: auto;
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
   border-radius: 50%;
   background-color: #045D8C;
+  color: #ffffff;
+}
+nav .main__nav .nav__icon .article--bag .fade-enter-active, nav .main__nav .nav__icon .article--bag .fade-leave-active {
+  transition: opacity 0.5s;
+}
+nav .main__nav .nav__icon .article--bag .fade-enter, nav .main__nav .nav__icon .article--bag .fade-leave-to {
+  opacity: 0;
+}
+nav .main__nav .nav__icon .article--bag .cart {
+  position: absolute;
+  top: 25px;
+  right: auto;
+  bottom: auto;
+  left: -400px;
+  padding: 15px;
+  background-color: #9ce0ff;
+  border: 1px solid #efefef;
+  color: #303030;
+  width: 430px;
+}
+nav .main__nav .nav__icon .article--bag .cart li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+nav .main__nav .nav__icon .article--bag .cart li span {
+  width: 45%;
+}
+nav .main__nav .nav__icon .article--bag .cart li span:last-child {
+  width: 10%;
+}
+nav .main__nav .nav__icon .article--bag .cart .total {
+  border-top: 1px solid #efefef;
+  padding-top: 5px;
+  justify-content: flex-end;
 }
 nav.nav__sticky {
   position: fixed;
@@ -461,6 +496,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   font-size: 22px;
 }
 #courses .courses__box .card .card__title span {
+  cursor: pointer;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;

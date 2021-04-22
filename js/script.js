@@ -137,7 +137,7 @@ var app = new Vue (
                         img: '4',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Programming',
-                        price: 'Free'
+                        price: 0
                     },
                     {
                         title: 'Web Designing',
@@ -145,7 +145,7 @@ var app = new Vue (
                         img: '5',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Programming',
-                        price: 'Free'
+                        price: 0
                     },
                     {
                         title: 'Financial Modeling',
@@ -153,7 +153,7 @@ var app = new Vue (
                         img: '6',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Business',
-                        price: '$20'
+                        price: 20
                     }
                 ],
                 [
@@ -163,7 +163,7 @@ var app = new Vue (
                         img: '7',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Programming',
-                        price: 'Free'
+                        price: 0
                     },
                     {
                         title: 'Web Designing',
@@ -171,7 +171,7 @@ var app = new Vue (
                         img: '8',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Programming',
-                        price: 'Free'
+                        price: 0
                     },
                     {
                         title: 'Basic Marketing',
@@ -179,7 +179,7 @@ var app = new Vue (
                         img: '9',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Business',
-                        price: '$20'
+                        price: 20
                     }
                 ],
                 [
@@ -189,7 +189,7 @@ var app = new Vue (
                         img: '10',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Programming',
-                        price: '$50'
+                        price: 50
                     },
                     {
                         title: 'Python for Everybody',
@@ -197,7 +197,7 @@ var app = new Vue (
                         img: '11',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Programming',
-                        price: 'Free'
+                        price: 0
                     },
                     {
                         title: 'Human-Centered Design',
@@ -205,12 +205,15 @@ var app = new Vue (
                         img: '12',
                         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, eos eius atque magnam eum natus ad sunt ut impedit vel qui, debitis maiores eveniet, assumenda temporibus voluptate sequi aliquid iusto?',
                         type: 'Business',
-                        price: '$40'
+                        price: 40
                     }
                 ]
 
 
             ],
+            shopBag: [],
+            totalPrice: 0,
+            show: false,
             listPlans:[
                 {
                     name: 'Standard',
@@ -353,6 +356,16 @@ var app = new Vue (
                     top: 0,
                     behavior: 'smooth'
                 })
+            },
+            addArticle: function(corso){
+                if ( !this.shopBag.includes(corso)){
+                    this.shopBag.push(corso);
+                    this.totalPrice += corso.price;
+                }
+            },
+            removeArticle: function (article, index){
+                this.totalPrice -= article.price;
+                this.shopBag.splice(index,1);
             }
         }
 });

@@ -52,17 +52,48 @@ nav{
             }
             .article--bag{
                 position: relative;
-                &:after{
-                    content: '0';
+                .tot__articles{
                     font-size: 13px;
                     text-align: center;
                     display: block;
                     @include positionAbsolute ( -5px, -8px, auto, auto);
-                    width: 15px;
-                    height: 15px;
-                    line-height: 15px;
+                    width: 17px;
+                    height: 17px;
+                    line-height: 17px;
                     border-radius: 50%;
                     background-color: $mainColor;
+                    color: $textWhite;
+                }
+                .fade-enter-active, .fade-leave-active {
+                    transition: opacity .5s;
+                }
+                .fade-enter, .fade-leave-to {
+                    opacity: 0;
+                }
+                .cart{
+                    @include positionAbsolute( 25px, auto, auto, -400px);
+                    padding: 15px;
+                    background-color: $mainColorLight;
+                    border: 1px solid $borderColorGrey;
+                    color: $textBlack;
+                    width: 430px;
+                    li{
+                        list-style: none;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 12px;
+                        span{
+                            width: 45%;
+                        }
+                        span:last-child{
+                            width: 10%;
+                        }
+                    }
+                    .total{
+                        border-top: 1px solid $borderColorGrey;
+                        padding-top: 5px;
+                        justify-content: flex-end;
+                    }
                 }
             }
         }
@@ -88,7 +119,6 @@ nav{
                 }
             }
             .nav__icon{
-            
                 i{
                     color: $textGreyDark;
                 }
