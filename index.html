@@ -260,46 +260,14 @@
                             </li>
                         </ul>
                         <!-- lista corsi -->
-                        <ul>
-                            <li>Popular Courses</li>
-                            <li>
-                                <p>
-                                    <a href="#">Business English</a> 
-                                    <a href="#"><span>Preston Marshall</span></a>
+                        <ul v-for="list in linkFooter">
+                            <li v-for="link in list">
+                                <p v-if="link.nameTeacher">
+                                    <a href="#">{{ link.name }}</a> 
+                                    <a href="#"><span>{{ link.nameTeacher }}</span></a>
                                 </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <a href="#">Social Computing</a>
-                                    <a href="#"><span>David Sanders</span></a>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <a href="#">Learn Spanish</a>
-                                    <a href="#"><span>Jennie King</span></a>
-                                </p>
-                            </li>
-                        </ul>
-                        <!-- lista support -->
-                        <ul>
-                            <li>
-                                Support
-                            </li>
-                            <li>
-                                <a href="#">User Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="#">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="#">Course Offer</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
+                                <a href="#" v-else-if="link.name">{{ link.name }}</a>
+                                {{ link.title }}
                             </li>
                         </ul>
                         <!-- map footer -->

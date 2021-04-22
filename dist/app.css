@@ -95,6 +95,7 @@ h4 {
   background-color: #ffffff;
   border: 2px solid #efefef;
   font-size: 17px;
+  font-weight: 700;
   color: #cecece;
   cursor: pointer;
 }
@@ -104,8 +105,8 @@ h4 {
   color: #ffffff;
 }
 .btn--active:hover {
-  border-color: #55acee;
-  background-color: #55acee;
+  border-color: #9ce0ff;
+  background-color: #9ce0ff;
 }
 
 header {
@@ -152,7 +153,7 @@ nav .main__nav .nav__icon i:not(:last-child) {
   margin-right: 20px;
 }
 nav .main__nav .nav__icon i:hover {
-  color: #55acee;
+  color: #9ce0ff;
   cursor: pointer;
 }
 nav .main__nav .nav__icon .article--bag {
@@ -193,7 +194,7 @@ nav.nav__sticky .main__nav .nav__icon i {
   color: #808080;
 }
 nav.nav__sticky .main__nav .nav__icon i:hover {
-  color: #55acee;
+  color: #9ce0ff;
   cursor: pointer;
 }
 
@@ -300,7 +301,7 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   text-transform: uppercase;
 }
 .home-tutoring__box a:hover {
-  color: #55acee;
+  color: #9ce0ff;
 }
 .home-tutoring__box img {
   width: 100%;
@@ -535,11 +536,11 @@ nav.nav__sticky .main__nav .nav__icon i:hover {
   margin-bottom: 10px;
 }
 #plans .plans__box .plans__choose:hover {
-  background-color: rgba(85, 172, 238, 0.1);
+  background-color: rgba(156, 224, 255, 0.1);
   border-color: rgba(4, 93, 140, 0.4);
 }
 #plans .plans__box .plans__background {
-  background-color: rgba(85, 172, 238, 0.1);
+  background-color: rgba(156, 224, 255, 0.1);
 }
 #plans .plans__box .border--active {
   border-color: #045D8C;

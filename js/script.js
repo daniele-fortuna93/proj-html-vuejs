@@ -261,7 +261,46 @@ var app = new Vue (
                 '5.png'
             ],
             topPageVisible: false,
-            navWhite: true
+            navWhite: true,
+            linkFooter: [
+                [
+                    {
+                        title: 'Popular Courses'
+                    },
+                    {
+                        name: 'Business English',
+                        nameTeacher: 'Preston Marshall'
+                    },
+                    {
+                        name: 'Social Computing',
+                        nameTeacher: 'David Sanders'
+                    },
+                    {
+                        name: 'Learn Spanish',
+                        nameTeacher: 'Jennie King'
+                    },
+                ],
+                [
+                    {
+                        title: 'Support'
+                    },
+                    {
+                        name: 'User Dashboard'
+                    },
+                    {
+                        name: 'Contact Us'
+                    },
+                    {
+                        name: 'FAQ'
+                    },
+                    {
+                        name: 'Course Offer'
+                    },
+                    {
+                        name: 'Events'
+                    },
+                ]
+            ]
             
         },
         mounted: function(){
